@@ -1,0 +1,18 @@
+<a [routerLink]="['/']">
+  <h1>Project</h1>
+</a>
+<div *ngIf = "router.url !== '/login'">
+<!--<a [routerLink]="['/cart']" class="button fancy-button" style="margin-right: 20px;">Check Out</a>
+-->
+  <a [routerLink]="['/login']" class="button fancy-button">Log In</a>
+</div>
+<div *ngIf = "router.url === '/login'">
+  <!--<a [routerLink]="['/cart']" class="button fancy-button" style="margin-right: 20px;">Check Out</a>
+  -->
+    <a [routerLink]="['/register']" class="button fancy-button">Register</a>
+  </div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

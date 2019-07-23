@@ -1,0 +1,9 @@
+<h2>Product Details</h2>
+
+<div *ngIf="event"> 
+  <h3>{{ event.name }}</h3>
+  <h4>{{ event.price | currency }}</h4>
+  <p>{{ event.description }}</p>
+
+  <button class="button" type="submit">Buy</button>
+</div>

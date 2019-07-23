@@ -1,0 +1,29 @@
+<h2>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <input type="text" formControlName="name" placeholder="Name"> 
+  <input type="text" formControlName="price" placeholder="Price">
+  <input type="text" formControlName="details" placeholder="Details">
+  <button class="button" type="submit">Filter</button>
+  
+</form>
+</h2>
+<div *ngFor="let event of events; index as eventId">
+  <h3>
+   {{event.name}}
+  </h3>
+  
+  <h2>
+    Price: {{ event.price }} <br>
+    Description: {{ event.description }}
+  </h2>
+ 
+  <button (click)="open(eventId)">
+    More
+  </button>
+
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
